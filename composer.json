@@ -1,0 +1,18 @@
+{
+    "name": "mahan/leddy",
+    "authors": [
+        {
+            "name": "mahankabir",
+            "email": "mahan.kabir@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Mahan\\Leddy\\": "src/"
+        }
+    },
+    "require": {
+        "illuminate/support": "~8",
+        "cviebrock/eloquent-sluggable": "^8.0"
+    }
+}
