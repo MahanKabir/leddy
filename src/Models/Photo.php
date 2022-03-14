@@ -10,4 +10,20 @@ class Photo extends Model
 {
 
     protected $fillable = ['name', 'path'];
+
+    //relations
+
+    //getters
+    public function getName(){
+        return $this->name;
+    }
+
+    public function getPath(){
+        return $this->path;
+    }
+
+    //scope
+    public function scopeFilter(){
+
+    }
 }

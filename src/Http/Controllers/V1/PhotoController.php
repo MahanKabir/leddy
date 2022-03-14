@@ -41,12 +41,8 @@ class PhotoController
             ],
         ]);
 
-        Photo::create([
-            'name' => json_encode($file['name']),
-            'path' => $file['directory'],
-        ]);
+        $photos = $this->photoService->create($file);
 
-        $photos = Photo::all();
 
         return response()->json(['data', $photos], 200);
     }

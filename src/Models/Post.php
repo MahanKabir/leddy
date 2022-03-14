@@ -29,4 +29,9 @@ class Post extends Model
     public function getStatus(){
         return $this->getStatus;
     }
+
+    //scope
+    public function scopeFilter(){
+
+    }
 }

@@ -14,7 +14,7 @@ abstract class MainRepository
     }
 
     public function all(){
-        return $this->model->orderBy('update_at', 'desc')->filter()->get();
+        return $this->model->orderBy('updated_at', 'desc')->filter()->get();
     }
 
     public function paginate($paginate=15){
