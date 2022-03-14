@@ -6,7 +6,7 @@ use Mahan\Leddy\Http\Controllers\V1\PostController;
 use Mahan\Leddy\Http\Controllers\V1\PhotoController;
 
 
-Route::prefix('/leddy')->name('leddy.')->group(function (){
+Route::prefix('api/v1/leddy')->name('leddy.')->group(function (){
     Route::prefix('/post')->name('post.')->group(function (){
         Route::get('/', [PostController::class, 'index'])->name('index');
         Route::post('/', [PostController::class, 'store'])->name('store');
