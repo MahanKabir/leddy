@@ -41,7 +41,7 @@ class PhotoService
 
             $image = $this->framePhoto($image, $size, $data['frame']);
             $name = $size['w'] . '-' . $size['h'] . '-' . time() . '.' . $image_type[1];
-            Storage::disk('local')->put($data['path'] . "/{$name}", $image);
+            Storage::disk('leddy::driver')->put($data['path'] . "/{$name}", $image);
             $image_data[$key] = $name;
         }
 

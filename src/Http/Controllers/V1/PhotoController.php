@@ -43,7 +43,6 @@ class PhotoController
 
         $photos = $this->photoService->create($file);
 
-
         return response()->json(['data', $photos], 200);
     }
 }
