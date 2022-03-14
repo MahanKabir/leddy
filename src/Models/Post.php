@@ -4,12 +4,10 @@
 namespace Mahan\Leddy\Models;
 
 
-use Cviebrock\EloquentSluggable\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
-    use Sluggable;
 
     protected $fillable = ['title', 'slug', 'parameters', 'status'];
 
@@ -30,14 +28,5 @@ class Post extends Model
 
     public function getStatus(){
         return $this->getStatus;
-    }
-
-    public function sluggable(): array
-    {
-        return [
-            'slug' => [
-                'source' => 'title',
-            ]
-        ];
     }
 }

@@ -3,9 +3,6 @@
 
 namespace Mahan\Leddy;
 
-
-use Closure;
-
 use Illuminate\Foundation\AliasLoader;
 use Illuminate\Support\ServiceProvider;
 
@@ -18,11 +15,6 @@ class LeddyServiceProvider extends ServiceProvider
         });
 
         $this->mergeConfigFrom(__DIR__ . '/Config/main.php', 'leddy');
-
-//        $this->app->register(SlugService::class);
-//
-//        $loader = AliasLoader::getInstance();
-//        $loader->alias('SlugService', SlugService::class);
     }
 
     public function boot()

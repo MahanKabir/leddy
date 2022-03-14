@@ -9,7 +9,10 @@
     "autoload": {
         "psr-4": {
             "Mahan\\Leddy\\": "src/"
-        }
+        },
+        "files": [
+            "src/Helpers/helper.php"
+        ]
     },
     "require": {
         "illuminate/support": "~8",
