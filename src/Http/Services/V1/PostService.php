@@ -19,8 +19,6 @@ class PostService
 
     public function create(Request $request){
 
-        $this->validation($request);
-
         $data = [
             'parameters' => json_encode($request->parameters),
         ];
@@ -31,8 +29,6 @@ class PostService
     }
 
     public function edit(Request $request){
-
-        $this->validation($request);
 
         $data = [
             'parameters' => $request->parameters,
