@@ -24,8 +24,8 @@ class LeddyServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__ . '/Views', 'leddy');
         $this->publishes([
             __DIR__ . '/Config/main.php' => config_path('leddy.php'),
-            __DIR__ . '/Views' => base_path('/resources/views/leddy'),
-            __DIR__ . '/Migrations' => database_path('/migrations'),
+            __DIR__ . '/Views' => base_path('resources/views/leddy'),
+            __DIR__ . '/Migrations' => database_path('migrations'),
         ]);
     }
 }
