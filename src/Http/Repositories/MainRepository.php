@@ -18,7 +18,7 @@ abstract class MainRepository
     }
 
     public function paginate($paginate=15){
-        return $this->model->orderBy('update_at', 'desc')->filter()->paginate($paginate);
+        return $this->model->orderBy('updated_at', 'desc')->filter()->paginate($paginate);
     }
 
     public function getBy($col, $value, $limit=15){
@@ -39,6 +39,6 @@ abstract class MainRepository
     }
 
     public function exists($id){
-        return $this->model->where('id', $id)->exists();
+        return $this->model->whereId($id)->exists();
     }
 }
